@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- nav and first page content-->
+    <div class="container">
+        <div id="home">
+            <div class="nav-narrow">
+                <div class="nav-left">
+                    <a href="#home">Home</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#mobile">Mobile</a>
+                </div>
+            </div>
+            <div class="portfolio-h5">
+                <h5>This is my</h5>
+            </div>
+            <div class="portfolio-h1">
+                <h1>Portfolio</h1>
+            </div>
+            <img class="profile-img" src="insta-removebg.png" alt="profile-img">
+        </div>
+    </div>
+    <!--portfolio content-->
+
+    <!--Portfolio1-->
+    <div id="portfolio">
+    <div class="portfolio-first">
+        <h2 class="h2-first-project">My Portfolio</h2>
+
+        <div class="portfolio-items-wrapper">
+
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style="background-image:url(card-preview-project.png); width:680px; height:500px; "></div>
+            
+                <div class="img-text">
+                    <div class="img-text-wrapper">
+                        <div class="img-text-head">
+                        </div>
+
+                        <div class="subtitle">
+                            <h2>Card Preview</h2>
+                            <p>This is my first project finished, with some errors but I will solve them.</p>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        </div>  
+        <form action="https://ernestomagnificu.github.io/Preview-card/" target="_blank">
+        <input type="submit" name="Button" value="Click Me" class="submit">
+        </form><br><br>
+
+        <!--Portfolio2-->
+
+
+        <!--Portfolio3-->
+
+        <!--About me-->
+
+        <div id="about">
+            <h2 class="about-me-h1">About Me</h2>
+            <p class="about-me-p">Just a 17 years old kid with a dream</p>
+        </div>
+
+        <!--Mobile screen-->
+        <div id="mobile">
+            <div class="mobile-title">
+                <h1>Mobile View</h1>
+            </div>
+            <div class="screen-view">
+                <div class="first-screen">
+                    <img src="" alt="">
+                </div>
+                <div class="second-screen">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!--Contact-->
+
+        <div id="contact">
+            <h2>Contact</h2>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            console.log(portfolioItem.childNodes[1].classList);
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    
+    })
+</script>
+</html>
